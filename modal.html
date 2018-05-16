@@ -9,14 +9,18 @@
         var x = document.getElementById("background");
         x.classList.add("modal")
         var y = document.getElementById("modal_box");
-        y.classList.add("modal_box")
+        if(y.style.visibility == "hidden"){
+          y.style.visibility = "visible";
+        }
       }
+
     </script>
   </head>
   <body>
     <button onclick="launch_box()">Click here to open the modal</button>
     <div id = "background">
-      <div id = "modal_box">
+      <div style="visibility:hidden" id = "modal_box">
+        <p>hey</p>
         <!-- <div id = "cancel">cancel</div> -->
       </div>
     </div>
