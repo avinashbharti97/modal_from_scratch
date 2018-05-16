@@ -14,14 +14,23 @@
         }
       }
 
+      function close(){
+        console.log("yes");
+        var x = document.getElementById("background");
+        var y = document.getElementById("modal_box");
+
+        x.style.visiblity = "hidden";
+        y.style.visiblity = "hidden";
+      }
+
     </script>
   </head>
   <body>
     <button onclick="launch_box()">Click here to open the modal</button>
     <div id = "background">
       <div style="visibility:hidden" id = "modal_box">
-        <p>hey</p>
-        <!-- <div id = "cancel">cancel</div> -->
+          <button id="cancel" onclick="close()">X</button>
+          <p>hey</p>
       </div>
     </div>
   </body>
